@@ -1,7 +1,7 @@
 /* hero */
 
 .hero {
-  color: var(--primary-white-color);
+  color: $primary-white-color;
   text-align: center;
   padding-top: 200px;
   padding-bottom: 280px;
@@ -41,6 +41,6 @@
   text-align: center;
   letter-spacing: 0.06em;
 
-  color: var(--primary-white-color);
-  background-color: var(--accent-color);
+  color: $primary-white-color;
+  background-color: $accent-color;
 }

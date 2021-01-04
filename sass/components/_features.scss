@@ -21,7 +21,7 @@
   background-repeat: no-repeat;
   background-position: center;
   margin-bottom: 30px;
-  background-color: var(--primary-background);
+  background-color: $primary-background;
   border-radius: 4px;
 }
 
@@ -47,7 +47,7 @@ background-image: url('../images/clock1.svg');
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
-  color: var(--title-text-color);
+  color: $title-text-color;
 }
 
 .feature-item {
