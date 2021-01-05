@@ -32,9 +32,8 @@
 }
 
 .modal .close-btn {
-  display: flex;
+  @extend %flexAlign;
   justify-content: center;
-  align-items: center;
   position: absolute;
   top: 8px;
   right: 8px;
@@ -44,11 +43,10 @@
   background-color: $primary-white-color;
   border: 1px solid rgba(0, 0, 0, 0.1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal .close-btn:hover {
+&:hover {
   fill: $accent-color;
   cursor: pointer;
+}
 }
 
 .form-modal {
@@ -117,6 +115,10 @@
   border-radius: 4px;
   resize: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+&:focus {
+  outline: none;
+  border-color: $accent-color;
+}
 }
 
 .form-input::placeholder {
@@ -126,15 +128,9 @@
   color: rgba(117, 117, 117, 0.5);
 }
 
-.comment:focus {
-  outline: none;
-  border-color: $accent-color;
-}
-
 .accept-field {
-  display: flex;
+  @extend %flexAlign;
   justify-content: center;
-  align-items: center;
   margin-bottom: 30px;
   font-size: 14px;
   line-height: 1.71;
@@ -160,9 +156,7 @@
   margin-right: 7px;
   border: 2px solid #2a2a2a;
   border-radius: 4px;
-}
-
-.checkbox:checked + .icon-check {
+.checkbox:checked + & {
   background-size: contain;
   background-position: center;
   border-color: $accent-color;
@@ -171,6 +165,8 @@
   background-origin: border-box;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+}
+
 
 .accept-field .checkbox-link {
   display: contents;
@@ -198,9 +194,8 @@
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.send-btn:hover,
-.send-btn:focus {
+&:hover,
+&:focus {
   background-color: #188CE8;
+}
 }

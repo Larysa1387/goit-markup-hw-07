@@ -4,7 +4,9 @@
 @import "./base/container";
 
 @import "./utils/reset";
+@import "./utils/visually-hidden";
 @import "./utils/placeholders";
+@import "./utils/mixins";
 
 @import "./components/header";
 @import "./components/hero";
